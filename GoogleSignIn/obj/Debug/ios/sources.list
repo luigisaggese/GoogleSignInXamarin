@@ -1,0 +1,11 @@
+obj/Debug/ios/ObjCRuntime/Messaging.g.cs
+obj/Debug/ios/GoogleSignIn/Authentication.g.cs
+obj/Debug/ios/GoogleSignIn/GoogleUser.g.cs
+obj/Debug/ios/GoogleSignIn/ProfileData.g.cs
+obj/Debug/ios/GoogleSignIn/SignInDelegate.g.cs
+obj/Debug/ios/GoogleSignIn/SignInUIDelegate.g.cs
+obj/Debug/ios/GoogleSignIn/SignIn.g.cs
+obj/Debug/ios/GoogleSignIn/SignInButton.g.cs
+obj/Debug/ios/GoogleSignIn/UIViewController_GIDSignIn.g.cs
+obj/Debug/ios/SupportDelegates.g.cs
+obj/Debug/ios/ObjCRuntime/Trampolines.g.cs
