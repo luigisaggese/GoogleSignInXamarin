@@ -9,6 +9,8 @@
     <RootNamespace>GoogleSignIn</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>GoogleSignIn</AssemblyName>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,7 +56,6 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\GoogleSignIn.bundle\GTMOAuth2ViewTouch.nib" />
-    <BundleResource Include="Resources\GoogleSignIn.bundle\Info.plist" />
     <BundleResource Include="Resources\GoogleSignIn.bundle\Roboto-Bold.ttf" />
     <BundleResource Include="Resources\GoogleSignIn.bundle\Roboto-Regular.ttf" />
     <BundleResource Include="Resources\GoogleSignIn.bundle\google.png" />
@@ -99,6 +100,5 @@
     <BundleResource Include="Resources\GoogleSignIn.bundle\vi.lproj\GoogleSignIn.strings" />
     <BundleResource Include="Resources\GoogleSignIn.bundle\zh_CN.lproj\GoogleSignIn.strings" />
     <BundleResource Include="Resources\GoogleSignIn.bundle\zh_TW.lproj\GoogleSignIn.strings" />
-    <BundleResource Include="Resources\GoogleSignIn.bundle\GoogleSignIn" />
   </ItemGroup>
 </Project>

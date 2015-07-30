@@ -1,6 +1,5 @@
 /Users/luigi.saggese/Projects/GoogleSignIn/GoogleSignIn/obj/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
 /Users/luigi.saggese/Projects/GoogleSignIn/GoogleSignIn/obj/Debug/GoogleSignIn.Resources.GoogleSignIn.bundle.GTMOAuth2ViewTouch.nib
-/Users/luigi.saggese/Projects/GoogleSignIn/GoogleSignIn/obj/Debug/GoogleSignIn.Resources.GoogleSignIn.bundle.Info.plist
 /Users/luigi.saggese/Projects/GoogleSignIn/GoogleSignIn/obj/Debug/GoogleSignIn.Resources.GoogleSignIn.bundle.Roboto-Bold.ttf
 /Users/luigi.saggese/Projects/GoogleSignIn/GoogleSignIn/obj/Debug/GoogleSignIn.Resources.GoogleSignIn.bundle.Roboto-Regular.ttf
 /Users/luigi.saggese/Projects/GoogleSignIn/GoogleSignIn/obj/Debug/GoogleSignIn.Resources.GoogleSignIn.bundle.google.png
@@ -45,7 +44,6 @@
 /Users/luigi.saggese/Projects/GoogleSignIn/GoogleSignIn/obj/Debug/GoogleSignIn.Resources.GoogleSignIn.bundle.vi.lproj.GoogleSignIn.strings
 /Users/luigi.saggese/Projects/GoogleSignIn/GoogleSignIn/obj/Debug/GoogleSignIn.Resources.GoogleSignIn.bundle.zh_CN.lproj.GoogleSignIn.strings
 /Users/luigi.saggese/Projects/GoogleSignIn/GoogleSignIn/obj/Debug/GoogleSignIn.Resources.GoogleSignIn.bundle.zh_TW.lproj.GoogleSignIn.strings
-/Users/luigi.saggese/Projects/GoogleSignIn/GoogleSignIn/obj/Debug/GoogleSignIn.Resources.GoogleSignIn.bundle.GoogleSignIn
 /Users/luigi.saggese/Projects/GoogleSignIn/GoogleSignIn/bin/Debug/GoogleSignIn.dll.mdb
 /Users/luigi.saggese/Projects/GoogleSignIn/GoogleSignIn/bin/Debug/GoogleSignIn.dll
 /Users/luigi.saggese/Projects/GoogleSignIn/GoogleSignIn/obj/Debug/GoogleSignIn.dll

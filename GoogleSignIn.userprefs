@@ -7,8 +7,7 @@
       <File FileName="GoogleSignInSample/MainViewController.cs" Line="1" Column="1" />
       <File FileName="GoogleSignInSample/Main.cs" Line="12" Column="1" />
       <File FileName="GoogleSignInSample/Info.plist" />
-      <File FileName="GoogleSignInSample/AppDelegate.cs" Line="18" Column="68" />
-      <File FileName="GoogleSignInSample/GoogleService-Info.plist" />
+      <File FileName="GoogleSignInSample/AppDelegate.cs" Line="18" Column="46" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
