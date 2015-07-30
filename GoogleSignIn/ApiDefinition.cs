@@ -7,11 +7,11 @@ using System.Drawing;
 namespace Google.SignIn
 {
 	// typedef void (^GIDAccessTokenHandler)(NSString *NSError *);
-	public delegate void GIDAccessTokenHandler (string arg0, NSError arg1);
+	delegate void GIDAccessTokenHandler (string arg0, NSError arg1);
 
 	// @interface GIDAuthentication : NSObject <NSCoding>
 	[BaseType (typeof(NSObject), Name = "GIDAuthentication")]
-	public interface Authentication : INSCoding
+	interface Authentication : INSCoding
 	{
 		// @property (readonly, nonatomic) NSString * clientID;
 		[Export ("clientID")]
@@ -44,7 +44,7 @@ namespace Google.SignIn
 
 	// @interface GIDGoogleUser : NSObject <NSCoding>
 	[BaseType (typeof(NSObject), Name = "GIDGoogleUser")]
-	public interface GoogleUser : INSCoding
+	interface GoogleUser : INSCoding
 	{
 		// @property (readonly, nonatomic) NSString * userID;
 		[Export ("userID")]
@@ -73,7 +73,7 @@ namespace Google.SignIn
 
 	// @interface GIDProfileData : NSObject <NSCoding>
 	[BaseType (typeof(NSObject),Name = "GIDProfileData")]
-	public interface ProfileData : INSCoding
+	interface ProfileData : INSCoding
 	{
 		// @property (readonly, nonatomic) NSString * email;
 		[Export ("email")]
@@ -99,12 +99,12 @@ namespace Google.SignIn
 		NSString kGIDSignInErrorDomain { get; }
 	}
 
+	interface ISignInDelegate {}
 	// @protocol GIDSignInDelegate
-
 	[BaseType (typeof (NSObject), Name = "GIDSignInDelegate")]
 	[Protocol]
 	[Model]	
-	public interface SignInDelegate
+	interface SignInDelegate
 	{
 		// @required -(void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error;
 		[Abstract]
@@ -117,11 +117,12 @@ namespace Google.SignIn
 	}
 
 
+	interface ISignInUIDelegate {}
 
 	// @protocol GIDSignInUIDelegate <NSObject>
 	[Protocol, Model]
 	[BaseType (typeof(NSObject), Name = "GIDSignInUIDelegate")]
-	public interface SignInUIDelegate
+	interface SignInUIDelegate
 	{
 		// @optional -(void)signInWillDispatch:(GIDSignIn *)signIn error:(NSError *)error;
 		[Export ("signInWillDispatch:error:"),EventArgs ("SignInUIDelegateSignInWillDispatch")]
@@ -141,26 +142,26 @@ namespace Google.SignIn
 		,Delegates= new string [] {"WeakDelegate","WeakUiDelegate"},
 		Events=new Type [] { typeof (SignInDelegate),typeof (SignInUIDelegate)}
 	)]
-	public interface SignIn
+	interface SignIn
 	{
 		// @property (readonly, nonatomic) GIDGoogleUser * currentUser;
 		[Export ("currentUser")]
 		GoogleUser CurrentUser { get; }
 
 		[Wrap ("WeakDelegate")][NullAllowed]
-		SignInDelegate Delegate { get; set; }
+		ISignInDelegate Delegate { get; set; }
 
 		// @property (nonatomic, weak) id<GIDSignInDelegate> delegate;
-		[Export ("delegate", ArgumentSemantic.Weak)][NullAllowed]
-		NSObject WeakDelegate { get; set; }
+		[Export ("delegate", ArgumentSemantic.Assign)][NullAllowed]
+		ISignInDelegate WeakDelegate { get; set; }
 
 		[Wrap ("WeakUiDelegate")][NullAllowed]
-		SignInUIDelegate UiDelegate { get; set; }
+		ISignInUIDelegate UiDelegate { get; set; }
 
 		// @property (nonatomic, weak) id<GIDSignInUIDelegate> uiDelegate;
 
-		[Export ("uiDelegate", ArgumentSemantic.Weak)][NullAllowed]
-		NSObject WeakUiDelegate { get; set; }
+		[Export ("uiDelegate", ArgumentSemantic.Assign)][NullAllowed]
+		ISignInUIDelegate WeakUiDelegate { get; set; }
 
 		// @property (copy, nonatomic) NSString * clientID;
 		[Export ("clientID", ArgumentSemantic.Copy)]

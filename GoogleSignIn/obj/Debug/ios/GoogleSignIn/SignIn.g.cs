@@ -244,9 +244,9 @@ namespace Google.SignIn {
 		}
 		
 		[CompilerGenerated]
-		public SignInDelegate Delegate {
+		public ISignInDelegate Delegate {
 			get {
-				return WeakDelegate as /**/SignInDelegate;
+				return WeakDelegate as /**/ISignInDelegate;
 			}
 			set {
 				WeakDelegate = value;
@@ -411,9 +411,9 @@ namespace Google.SignIn {
 		}
 		
 		[CompilerGenerated]
-		public SignInUIDelegate UiDelegate {
+		public ISignInUIDelegate UiDelegate {
 			get {
-				return WeakUiDelegate as /**/SignInUIDelegate;
+				return WeakUiDelegate as /**/ISignInUIDelegate;
 			}
 			set {
 				WeakUiDelegate = value;
@@ -423,21 +423,21 @@ namespace Google.SignIn {
 		[CompilerGenerated]
 		object __mt_WeakDelegate_var;
 		[CompilerGenerated]
-		public virtual NSObject WeakDelegate {
-			[Export ("delegate", ArgumentSemantic.Weak)]
+		public virtual ISignInDelegate WeakDelegate {
+			[Export ("delegate", ArgumentSemantic.UnsafeUnretained)]
 			get {
-				NSObject ret;
+				ISignInDelegate ret;
 				if (IsDirectBinding) {
-					ret = Runtime.GetNSObject (ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("delegate")));
+					ret =  Runtime.GetINativeObject<ISignInDelegate> (ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("delegate")), false);
 				} else {
-					ret = Runtime.GetNSObject (ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("delegate")));
+					ret =  Runtime.GetINativeObject<ISignInDelegate> (ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("delegate")), false);
 				}
 				MarkDirty ();
 				__mt_WeakDelegate_var = ret;
 				return ret;
 			}
 			
-			[Export ("setDelegate:", ArgumentSemantic.Weak)]
+			[Export ("setDelegate:", ArgumentSemantic.UnsafeUnretained)]
 			set {
 				if (IsDirectBinding) {
 					ApiDefinition.Messaging.void_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("setDelegate:"), value == null ? IntPtr.Zero : value.Handle);
@@ -452,21 +452,21 @@ namespace Google.SignIn {
 		[CompilerGenerated]
 		object __mt_WeakUiDelegate_var;
 		[CompilerGenerated]
-		public virtual NSObject WeakUiDelegate {
-			[Export ("uiDelegate", ArgumentSemantic.Weak)]
+		public virtual ISignInUIDelegate WeakUiDelegate {
+			[Export ("uiDelegate", ArgumentSemantic.UnsafeUnretained)]
 			get {
-				NSObject ret;
+				ISignInUIDelegate ret;
 				if (IsDirectBinding) {
-					ret = Runtime.GetNSObject (ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("uiDelegate")));
+					ret =  Runtime.GetINativeObject<ISignInUIDelegate> (ApiDefinition.Messaging.IntPtr_objc_msgSend (this.Handle, Selector.GetHandle ("uiDelegate")), false);
 				} else {
-					ret = Runtime.GetNSObject (ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("uiDelegate")));
+					ret =  Runtime.GetINativeObject<ISignInUIDelegate> (ApiDefinition.Messaging.IntPtr_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("uiDelegate")), false);
 				}
 				MarkDirty ();
 				__mt_WeakUiDelegate_var = ret;
 				return ret;
 			}
 			
-			[Export ("setUiDelegate:", ArgumentSemantic.Weak)]
+			[Export ("setUiDelegate:", ArgumentSemantic.UnsafeUnretained)]
 			set {
 				if (IsDirectBinding) {
 					ApiDefinition.Messaging.void_objc_msgSend_IntPtr (this.Handle, Selector.GetHandle ("setUiDelegate:"), value == null ? IntPtr.Zero : value.Handle);
