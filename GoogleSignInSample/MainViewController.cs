@@ -24,7 +24,7 @@ namespace GoogleSignInSample
 			btnSignIn = new SignInButton () {
 				Frame = new RectangleF (85, 176, 151, 48)
 			};
-
+			SignIn.SharedInstance.UiDelegate=this;
 			View.AddSubview (btnSignIn);
 		}
 	}
